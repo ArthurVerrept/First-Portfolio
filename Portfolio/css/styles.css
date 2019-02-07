@@ -1,0 +1,42 @@
+h1{
+  position: absolute;
+  text-align: center;
+  float: left;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: silver;
+}
+
+img{
+position: relative;
+}
+
+.display-1{
+  font-weight: bold;
+}
+
+
+
+div.circTxt{
+  /*allows for centering*/
+  display: inline-block;
+  /*adjust as needed*/
+  margin-bottom: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+nav{
+  background-color: rgb(10, 30, 55);
+}
+
+a{
+  color: silver;
+}
+
+
+a:hover{
+  background-color: silver;
+}
