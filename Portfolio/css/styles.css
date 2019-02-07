@@ -1,12 +1,54 @@
-h1{
-  position: absolute;
-  text-align: center;
-  float: left;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: silver;
+@media (max-width: 425.95px) {
+  #text{
+    text-align: center;
+    color: #505050;
+  }
 }
+
+@media (min-width: 426px) and (max-width: 991.98px) {
+  #text{
+    position: absolute;
+    text-align: center;
+    float: left;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: silver;
+  }
+
+  h1{
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  #text{
+    position: absolute;
+    text-align: center;
+    float: left;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: silver;
+  }
+}
+
+
+
+
+
+
+
+[id="1"]:hover{font-size: 130%}
+[id="2"]:hover{font-size: 130%}
+[id="3"]:hover{font-size: 130%}
+[id="4"]:hover{font-size: 130%}
+[id="4"]:hover{font-size: 130%}
+[id="5"]:hover{font-size: 130%}
+[id="6"]:hover{font-size: 130%}
+[id="7"]:hover{font-size: 130%}
+[id="8"]:hover{font-size: 130%}
+[id="9"]:hover{font-size: 130%}
 
 img{
 position: relative;
@@ -26,7 +68,6 @@ div.circTxt{
   margin-left: auto;
   margin-right: auto;
 }
-
 
 nav{
   background-color: rgb(10, 30, 55);
