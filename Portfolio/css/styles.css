@@ -1,0 +1,14 @@
+#backgroundL,
+#backgroundR{
+  border: 2px solid black;
+  margin: 10px;
+  transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
+}
+
+#backgroundR:hover{
+  transform: rotateZ(-5deg);
+}
+
+#backgroundL:hover{
+  transform: rotateZ(5deg);
+}
