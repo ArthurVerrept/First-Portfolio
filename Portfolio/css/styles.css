@@ -8,32 +8,33 @@
 @media (min-width: 992px) { ... }
 
 @media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
-.grow{
-  /* */
-  font-size: 12px;
-  transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
-}
+  .grow{
+    /* */
+    font-size: 12px;
+    transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
+  }
 
-.grow:hover{
-    transform: scale(1.1);
-    z-index: +1;
-}
+  .grow:hover{
+      transform: scale(1.1);
+      z-index: +1;
+  }
 
-#caption{
-  /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-  filter: drop-shadow(-6px 0 0 #18160e);
-}
+  #caption{
+    /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
+    filter: drop-shadow(-6px 0 0 #18160e);
+  }
 
-.fab.fa-wordpress-simple,
-.fab.fa-github{
-  color: lightgrey;
-}
+  .fab.fa-wordpress-simple,
+  .fab.fa-github{
+    color: lightgrey;
+  }
 
-.fab.fa-github:hover{
-  color: lightgreen;
-}
+  .fab.fa-github:hover{
+    color: lightgreen;
+  }
 
-.fab.fa-wordpress-simple:hover{
-  color: skyblue;
+  .fab.fa-wordpress-simple:hover{
+    color: skyblue;
+  }
+
 }
- }
