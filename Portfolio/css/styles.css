@@ -1,4 +1,13 @@
-/*setting all boxes to the same settings INDIVIDUALLY*/
+
+@media (max-width: 575.98px) { ... }
+
+@media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
 .grow{
   /* */
   font-size: 12px;
@@ -14,3 +23,17 @@
   /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
   filter: drop-shadow(-6px 0 0 #18160e);
 }
+
+.fab.fa-wordpress-simple,
+.fab.fa-github{
+  color: lightgrey;
+}
+
+.fab.fa-github:hover{
+  color: lightgreen;
+}
+
+.fab.fa-wordpress-simple:hover{
+  color: skyblue;
+}
+ }
