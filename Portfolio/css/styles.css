@@ -6,69 +6,7 @@
 @media (min-width: 768px) { ... }
 
 @media (min-width: 992px) {
-  #hide{
-    display: none;
-  }
 
-  .navbar{
-    background-color:#6AC2FF
-  }
-
-  .grow{
-    /* */
-    font-size: 12px;
-    transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
-  }
-
-  .grow:hover{
-      transform: scale(1.1);
-      z-index: +1;
-  }
-
-  /* selects all div classes with the word light in it and sets bg to chosen blue */
-  div[class*="light"] {
-    background-color: #6AC2FF;
-  }
-
-  #caption{
-    /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-    filter: drop-shadow(-6px 0 0 #18160e);
-  }
-
-  .fab.fa-wordpress-simple,
-  .fab.fa-github{
-    color: lightgrey;
-  }
-
-  .fab.fa-github:hover{
-    color: lightgreen;
-  }
-
-  .fab.fa-wordpress-simple:hover{
-    color: skyblue;
-  }
-
-  .st0{
-    fill:#6AC2FF;
-  }
-
-  #flawlessT{
-    color: #6AC2FF;
-    position: absolute;
-    top:24%;
-    left:20.5%;
-    transform: translate(-50, -50);
-    mix-blend-mode:color-dodge;
-  }
-  #flawlessB{
-    color: #6AC2FF;
-    font-weight:bold;
-    position: absolute;
-    top:50%;
-    left:51%;
-    transform: translate(-50, -50);
-    mix-blend-mode: color-dodge;
-  }
 }
 
 @media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
@@ -92,6 +30,7 @@
   }
 
 /* selects all div classes with the word light in it and sets bg to chosen blue */
+  h2[class*="light"],
   div[class*="light"] {
     background-color: #6AC2FF;
   }
@@ -136,7 +75,37 @@
     mix-blend-mode: color-dodge;
   }
 
-  #car2{
-    text-align: right;
+  .carousel-caption h2{
+    font-size: 40px;
+    filter: drop-shadow(-2px 0 0 #18160e);
   }
+
+  .carousel-caption p{
+    font-size: 25px;
+    filter: drop-shadow(-2px 0 0 #18160e);
+    margin-bottom: 100px;
+  }
+
+  #skills{
+    margin-top: -6px;
+  }
+
+  #portfolio{
+    margin-top: -16px;
+  }
+
+  #about{
+    margin-top: -8px;
+  }
+
+
+  #aboutContent{
+    margin-top: -8px;
+  }
+
+  footer{
+    margin-bottom: -16px;
+  }
+
+
 }
