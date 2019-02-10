@@ -73,7 +73,7 @@
 
 @media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
   #hide{
-    display: none;
+  display: none;
   }
 
   .navbar{
@@ -122,7 +122,7 @@
     color: #6AC2FF;
     position: absolute;
     top:24%;
-    left:20.5%;
+    left:24.5%;
     transform: translate(-50, -50);
     mix-blend-mode:color-dodge;
   }
@@ -134,5 +134,9 @@
     left:51%;
     transform: translate(-50, -50);
     mix-blend-mode: color-dodge;
+  }
+
+  #car2{
+    text-align: right;
   }
 }
