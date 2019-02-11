@@ -1,4 +1,6 @@
-
+html {
+  overflow-x: hidden;
+}
 @media (max-width: 575.98px) { ... }
 
 @media (min-width: 576px) { ... }
@@ -60,16 +62,15 @@
   #flawlessT{
     color: #6AC2FF;
     position: absolute;
-    top:24%;
+    top:15%;
     left:24.5%;
     transform: translate(-50, -50);
     mix-blend-mode:color-dodge;
   }
   #flawlessB{
     color: #6AC2FF;
-    font-weight:bold;
     position: absolute;
-    top:50%;
+    top:40%;
     left:51%;
     transform: translate(-50, -50);
     mix-blend-mode: color-dodge;
@@ -102,10 +103,5 @@
   #aboutContent{
     margin-top: -8px;
   }
-
-  footer{
-    margin-bottom: -16px;
-  }
-
 
 }
