@@ -31,6 +31,7 @@ html {
       z-index: +1;
   }
 
+
 /* selects all div classes with the word light in it and sets bg to chosen blue */
   h2[class*="light"],
   div[class*="light"] {
@@ -60,18 +61,21 @@ html {
   }
 
   #flawlessT{
+    font-family: futura-pt, sans-serif;
     color: #6AC2FF;
     position: absolute;
-    top:15%;
-    left:24.5%;
+    top:34%;
+    left:29.7%;
     transform: translate(-50, -50);
     mix-blend-mode:color-dodge;
   }
   #flawlessB{
+    font-family: futura-pt, sans-serif;
+    font-size: 60px;
     color: #6AC2FF;
     position: absolute;
-    top:40%;
-    left:51%;
+    top:45%;
+    left: 51%;
     transform: translate(-50, -50);
     mix-blend-mode: color-dodge;
   }
