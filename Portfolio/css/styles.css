@@ -20,6 +20,11 @@ html {
     background-color:#6AC2FF
   }
 
+  .nav-link[class*='t2']{animation-delay: 0.2s;}
+  .nav-link[class*='t3']{animation-delay: 0.4s;}
+  .nav-link[class*='t4']{animation-delay: 0.6s;}
+  .nav-link[class*='t5']{animation-delay: 0.8s;}
+
   .grow{
     /* */
     font-size: 12px;
