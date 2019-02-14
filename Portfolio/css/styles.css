@@ -1,23 +1,126 @@
-html {
-  overflow-x: hidden;
-}
+
+
 @media (max-width: 575.98px) { ... }
 
 @media (min-width: 576px) { ... }
 
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) {
+
+    html {
+      overflow-x: hidden;
+    }
+
+    .navbar{
+      background-color:#3880B2;
+    }
+
+    .nav-link[class*='t2']{animation-delay: 0.2s;}
+    .nav-link[class*='t3']{animation-delay: 0.4s;}
+    .nav-link[class*='t4']{animation-delay: 0.6s;}
+    .nav-link[class*='t5']{animation-delay: 0.8s;}
+
+    .grow{
+      /* */
+      font-size: 12px;
+      transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
+    }
+
+    .grow:hover{
+        transform: scale(1.05);
+        z-index: +1;
+    }
+
+    div i{
+      font-size: 40px;
+      padding-top: 10px;
+    }
+
+    /* selects all div classes with the word light in it and sets bg to chosen blue */
+    h2[class*="light"],
+    div[class*="text-light"] {
+      background-color: #3880B2;
+    }
+
+    #caption{
+      /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
+      filter: drop-shadow(-6px 0 0 #18160e);
+    }
+
+    .fab.fa-wordpress-simple,
+    .fab.fa-github{
+      color: lightgrey;
+    }
+
+    .fab.fa-github:hover{
+      color: lightgreen;
+    }
+
+    .fab.fa-wordpress-simple:hover{
+      color: skyblue;
+    }
+
+    .st0{
+      fill:#3880B2;
+    }
+
+    #landing{
+      position: relative;
+    }
+
+    #flawlessT{
+      font-size: 60px;
+      font-family: futura-pt, sans-serif;
+      color: #3880B2;
+      position: absolute;
+      top:20%;
+      right:51%;
+    }
+    #flawlessB{
+      font-size: 60px;
+      font-family: futura-pt, sans-serif;
+      position: absolute;
+      top:20%;
+      left: 51%;
+    }
+
+    .carousel-caption h2{
+      font-size: 30px;
+      filter: drop-shadow(-2px 0 0 #18160e);
+    }
+
+    .carousel-caption p{
+      font-size: 15px;
+      filter: drop-shadow(-2px 0 0 #18160e);
+      margin-bottom: 40px;
+    }
+
+    #skills{
+      margin-top: -6px;
+
+    }
+
+    #portfolio{
+      margin-top: -16px;
+    }
+
+    #about{
+      margin-top: -8px;
+    }
+
+
+    #aboutContent{
+      margin-top: -8px;
+    }
+}
 
 @media (min-width: 992px) {
 
-}
-
-@media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
-  #hide{
-  display: none;
+  html {
+    overflow-x: hidden;
   }
 
   .navbar{
-    background-color:#6AC2FF
+    background-color:#3880B2;
   }
 
   .nav-link[class*='t2']{animation-delay: 0.2s;}
@@ -32,15 +135,19 @@ html {
   }
 
   .grow:hover{
-      transform: scale(1.1);
+      transform: scale(1.05);
       z-index: +1;
   }
 
+  div i{
+    font-size: 60px;
+    padding-top: 0px;
+  }
 
-/* selects all div classes with the word light in it and sets bg to chosen blue */
+  /* selects all div classes with the word light in it and sets bg to chosen blue */
   h2[class*="light"],
   div[class*="light"] {
-    background-color: #6AC2FF;
+    background-color: #3880B2;
   }
 
   #caption{
@@ -62,27 +169,127 @@ html {
   }
 
   .st0{
-    fill:#6AC2FF;
+    fill:#3880B2;
+  }
+
+  #landing{
+    position: relative;
   }
 
   #flawlessT{
     font-family: futura-pt, sans-serif;
-    color: #6AC2FF;
+    color: #3880B2;
     position: absolute;
-    top:34.1%;
-    left:29.7%;
+    top:20%;
+    right:51%;
     transform: translate(-50, -50);
-    mix-blend-mode:color-dodge;
   }
   #flawlessB{
     font-family: futura-pt, sans-serif;
-    font-size: 60px;
-    color: #6AC2FF;
     position: absolute;
-    top:46%;
-    left: 55%;
+    top:20%;
+    left: 51%;
     transform: translate(-50, -50);
-    mix-blend-mode: color-dodge;
+  }
+
+  .carousel-caption h2{
+    font-size: 30px;
+    filter: drop-shadow(-2px 0 0 #18160e);
+  }
+
+  .carousel-caption p{
+    font-size: 15px;
+    filter: drop-shadow(-2px 0 0 #18160e);
+    margin-bottom: 40px;
+  }
+
+  #skills{
+    margin-top: -6px;
+  }
+
+  #portfolio{
+    margin-top: -16px;
+  }
+
+  #about{
+    margin-top: -8px;
+  }
+
+
+  #aboutContent{
+    margin-top: -8px;
+  }
+
+}
+
+@media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
+  .navbar{
+    background-color:#3880B2;
+  }
+
+  .nav-link[class*='t2']{animation-delay: 0.2s;}
+  .nav-link[class*='t3']{animation-delay: 0.4s;}
+  .nav-link[class*='t4']{animation-delay: 0.6s;}
+  .nav-link[class*='t5']{animation-delay: 0.8s;}
+
+  .grow{
+    /* */
+    font-size: 12px;
+    transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
+  }
+
+  .grow:hover{
+      transform: scale(1.05);
+      z-index: +1;
+  }
+
+  div i{
+    font-size: 60px;
+
+  }
+
+/* selects all div classes with the word light in it and sets bg to chosen blue */
+  h2[class*="light"],
+  div[class*="light"] {
+    background-color: #3880B2;
+  }
+
+  #caption{
+    /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
+    filter: drop-shadow(-6px 0 0 #18160e);
+  }
+
+  .fab.fa-wordpress-simple,
+  .fab.fa-github{
+    color: lightgrey;
+  }
+
+  .fab.fa-github:hover{
+    color: lightgreen;
+  }
+
+  .fab.fa-wordpress-simple:hover{
+    color: skyblue;
+  }
+
+  .st0{
+    fill:#3880B2;
+  }
+
+  #flawlessT{
+    font-family: futura-pt, sans-serif;
+    color: #3880B2;
+    position: absolute;
+    top:20%;
+    right:51%;
+    transform: translate(-50, -50);
+  }
+  #flawlessB{
+    font-family: futura-pt, sans-serif;
+    position: absolute;
+    top:20%;
+    left: 51%;
+    transform: translate(-50, -50);
   }
 
   .carousel-caption h2{
