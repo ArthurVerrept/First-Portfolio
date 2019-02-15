@@ -19,9 +19,8 @@
 
 
   <body class="bg-light">
-    <!-- -->
     <!-- current navbar soon to change-->
-    <nav class="navbar sticky-top navbar-expand-sm">
+    <nav class="navbar sticky-top navbar-expand-sm animated fadeInDown">
       <a class="navbar-brand ml-3 text-light animated fadeInLeft" href="index.html">LOGO</a>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
@@ -56,7 +55,7 @@
       <!-- this is the about section -->
       <section id="skills">
         <!-- container-fluid to fill whole screen -->
-        <div class="container-fluid pl-0 pr-0">
+        <div id="myNav"class="container-fluid pl-0 pr-0">
           <!-- row has a margin of 1 on left and right so that when hovered over the sections of text do not go off screen -->
           <!-- centered for the bottom 2 to fit -->
           <div  class="row mr-1 ml-1 justify-content-center">
@@ -264,6 +263,21 @@
       duration: 2000,
       loop: false,
     })};
+
+
+    window.addEventListener('scroll', function(e) {
+      var div = document.getElementById("myNav");
+      var rect = div.getBoundingClientRect();
+      console.log(rect.top)
+      if (rect.top < 100) {
+        document.querySelector(".navbar").style.transition = "0.3s";
+        document.querySelector(".navbar").style.backgroundColor = "#3880B2";
+      }
+      else{
+        document.querySelector(".navbar").style.backgroundColor = "transparent";
+      }
+    });
+
 
   </script>
 
