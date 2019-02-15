@@ -222,21 +222,28 @@
 }
 
 @media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
-  #aboutContent{
-    display: none;
-  }
+
 
   .navbar{
+    transition: 0.3s;
     background-color: transparent;
     position: fixed;
     width: 100%;
   }
 
-  .nav-link[class*='t1']{animation-delay: 1.2s;}
-  .nav-link[class*='t2']{animation-delay: 1.4s;}
-  .nav-link[class*='t3']{animation-delay: 1.5s;}
-  .nav-link[class*='t4']{animation-delay: 1.6s;}
-  .nav-link[class*='t5']{animation-delay: 1.7s;}
+  .nav-link{
+    transition: 0.3s;
+  }
+
+  a.navbar-brand{
+    color: #3880B2
+  }
+
+  .nav-link[class*='t1']{animation-delay: 1.4s;}
+  .nav-link[class*='t2']{animation-delay: 1.5s;}
+  .nav-link[class*='t3']{animation-delay: 1.6s;}
+  .nav-link[class*='t4']{animation-delay: 1.7s;}
+  .nav-link[class*='t5']{animation-delay: 1.8s;}
 
   .grow{
     /* */

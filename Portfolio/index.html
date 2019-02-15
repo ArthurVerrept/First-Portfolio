@@ -21,7 +21,7 @@
   <body class="bg-light">
     <!-- current navbar soon to change-->
     <nav class="navbar sticky-top navbar-expand-sm animated fadeInDown">
-      <a class="navbar-brand ml-3 text-light animated fadeInLeft" href="index.html">LOGO</a>
+      <a class="navbar-brand ml-3 animated fadeInLeft" href="index.html">LOGO</a>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link t1 text-light ml-2 animated fadeInDown" href="index.html">Home</a>
@@ -55,7 +55,7 @@
       <!-- this is the about section -->
       <section id="skills">
         <!-- container-fluid to fill whole screen -->
-        <div id="myNav"class="container-fluid pl-0 pr-0">
+        <div class="container-fluid pl-0 pr-0">
           <!-- row has a margin of 1 on left and right so that when hovered over the sections of text do not go off screen -->
           <!-- centered for the bottom 2 to fit -->
           <div  class="row mr-1 ml-1 justify-content-center">
@@ -251,7 +251,6 @@
 
     <script>
 
-    var land = document.getElementById("landing");
     window.onload = function(){
       var animation = anime({
       targets: '.st0',
@@ -264,18 +263,75 @@
       loop: false,
     })};
 
-
+    //add an event listener that looks for scroll event
     window.addEventListener('scroll', function(e) {
-      var div = document.getElementById("myNav");
-      var rect = div.getBoundingClientRect();
-      console.log(rect.top)
-      if (rect.top < 100) {
-        document.querySelector(".navbar").style.transition = "0.3s";
-        document.querySelector(".navbar").style.backgroundColor = "#3880B2";
+      //load all id names of sections/divs into array
+      var locA = ['landing', 'skills', 'portfolio', 'aboutBar'];
+      //create another empty array to be filled
+      var loc = [];
+      //loop through all items in locA
+      for (var i = 0; i < locA.length; i++) {
+        //create div and set it to get element of current count
+        var div = document.getElementById(locA[i]);
+        //set temp to get properties of top, bottom, width, etc
+        var temp = div.getBoundingClientRect();
+        //add a new item in array with all that data to be called below when needed
+        loc.push(temp);
       }
-      else{
+
+      //contact not working for some reason
+      var divCon = document.getElementById("contact");
+      var contact = divCon.getBoundingClientRect();
+      console.log(contact.bot);
+
+      //if landing.top (the top of the landing element) is greater than -2
+      //i.e between 0 & -2 do the following
+      if (loc[0].top > -2) {
+        //set navbar background to transparent, logo to blue and set home nav-link to transparent background
         document.querySelector(".navbar").style.backgroundColor = "transparent";
+        document.querySelector(".navbar-brand").style.color = "#3880B2";
+        document.querySelectorAll(".nav-link")[0].style.backgroundColor = "transparent";
       }
+      //once landing.top moves past -2
+      if (loc[0].top < -2) {
+        //clears all navbar-link backgrounds
+        for (var i = 0; i < 4; i++) {
+          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
+        }
+        //sets navbar background to blue and logo to white
+        document.querySelector(".navbar").style.backgroundColor = "#3880B2";
+        document.querySelector(".navbar-brand").style.color = "white";
+        //sets 1st selection in querySelector to coloured background
+        document.querySelectorAll(".nav-link")[0].style.backgroundColor = "white";
+      }
+      //once skills.top goes under 70 which is just over the height of navbar
+      if (loc[1].top < 70) {
+        //clears all navbar-link backgrounds
+        for (var i = 0; i < 4; i++) {
+          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
+        }
+        //sets 2nd selection in querySelector to coloured background
+        document.querySelectorAll(".nav-link")[1].style.backgroundColor = "white";
+      }
+      //once portfolio.top goes under 70 which is just over the height of navbar
+      if (loc[2].top < 70) {
+        //clears all navbar-link backgrounds
+        for (var i = 0; i < 4; i++) {
+          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
+        }
+        //sets 3rd selection in querySelector to coloured background
+        document.querySelectorAll(".nav-link")[2].style.backgroundColor = "white";
+      }
+      //once aboutBar.top goes under 70 which is just over the height of navbar
+      if (loc[3].top < 70) {
+        //clears all navbar-link backgrounds
+        for (var i = 0; i < 4; i++) {
+          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
+        }
+        //sets 4th selection in querySelector to coloured background
+        document.querySelectorAll(".nav-link")[3].style.backgroundColor = "white";
+      }
+
     });
 
 
