@@ -17,26 +17,25 @@
     <title>SandBox Template!</title>
   </head>
 
-
   <body class="bg-light">
     <!-- current navbar soon to change-->
     <nav class="navbar sticky-top navbar-expand-sm animated fadeInDown">
       <a class="navbar-brand ml-3 animated fadeInLeft" href="index.html">LOGO</a>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link t1 text-light ml-2 animated fadeInDown" href="index.html">Home</a>
+          <a class="nav-link t1 text-light ml-2 animated fadeInDown" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link t2 text-light ml-2 animated fadeInDown" href="#">Skills</a>
+          <a class="nav-link t2 text-light ml-2 animated fadeInDown" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link t3 text-light ml-2 animated fadeInDown" href="#">Portfolio</a>
+          <a class="nav-link t3 text-light ml-2 animated fadeInDown" href="#portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link t4 text-light ml-2 animated fadeInDown" href="#">About Me</a>
+          <a class="nav-link t4 text-light ml-2 animated fadeInDown" href="#aboutBar">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link t5 text-light ml-2 animated mr-3 fadeInDown" href="#">Contact</a>
+          <a class="nav-link t5 text-light ml-2 animated mr-3 fadeInDown" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
@@ -93,7 +92,7 @@
         <div class="container-fluid pl-0 pr-0">
           <div class="row">
             <div class="col-xl-12 mb-5">
-              <a href="https://github.com/ArthurVerrept" target="_blank"> <i class="fab fa-github mt-4 ml-3 fa-pull-left" style="font-size:50px"></i></a><a href="https://arthurverrept110460868.wordpress.com/" target="_blank"> <i class="fab fa-wordpress-simple mt-4 mr-3 fa-pull-right" style="font-size:50px"></i></a><h2 class="mt-3 text-center text-light p-3">Portfolio</h2>
+              <a href="https://github.com/ArthurVerrept" target="_blank"> <i class="fab fa-github mt-3 ml-3 fa-pull-left" style="font-size:50px"></i></a><a href="https://arthurverrept110460868.wordpress.com/" target="_blank"> <i class="fab fa-wordpress-simple mt-3 mr-3 fa-pull-right" style="font-size:50px"></i></a><h2 class="mt-3 text-center text-light p-3">Portfolio</h2>
               <p class="text-center mt-2"> Portfolio will go here </p>
             </div>
           </div>
@@ -175,7 +174,7 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section>
         <div class="container-fluid pl-0 pr-0">
           <div class="row">
             <div class="col-xl-12 col-lg-12">
@@ -215,9 +214,9 @@
         </form>
       </section>
 
-      <footer class="page-footer font-small cyan darken-3">
+      <footer  class="page-footer font-small cyan darken-3">
         <!-- Footer Elements -->
-        <div class="container">
+        <div id="contact" class="container">
           <!-- Grid row-->
           <div class="row">
             <!-- Grid column -->
@@ -248,93 +247,7 @@
       </footer>
 
     <script src="js/anime.min.js"></script>
-
-    <script>
-
-    window.onload = function(){
-      var animation = anime({
-      targets: '.st0',
-      points: [
-        { value: ['105,110 0,110 0,0 42.78,0 105,0 ']},
-        { value: ['210,110 105,110 105,0 147.78,0 210,0 ']},
-      ],
-      easing: 'easeInOutSine',
-      duration: 2000,
-      loop: false,
-    })};
-
-    //add an event listener that looks for scroll event
-    window.addEventListener('scroll', function(e) {
-      //load all id names of sections/divs into array
-      var locA = ['landing', 'skills', 'portfolio', 'aboutBar'];
-      //create another empty array to be filled
-      var loc = [];
-      //loop through all items in locA
-      for (var i = 0; i < locA.length; i++) {
-        //create div and set it to get element of current count
-        var div = document.getElementById(locA[i]);
-        //set temp to get properties of top, bottom, width, etc
-        var temp = div.getBoundingClientRect();
-        //add a new item in array with all that data to be called below when needed
-        loc.push(temp);
-      }
-
-      //contact not working for some reason
-      var divCon = document.getElementById("contact");
-      var contact = divCon.getBoundingClientRect();
-      console.log(contact.bot);
-
-      //if landing.top (the top of the landing element) is greater than -2
-      //i.e between 0 & -2 do the following
-      if (loc[0].top > -2) {
-        //set navbar background to transparent, logo to blue and set home nav-link to transparent background
-        document.querySelector(".navbar").style.backgroundColor = "transparent";
-        document.querySelector(".navbar-brand").style.color = "#3880B2";
-        document.querySelectorAll(".nav-link")[0].style.backgroundColor = "transparent";
-      }
-      //once landing.top moves past -2
-      if (loc[0].top < -2) {
-        //clears all navbar-link backgrounds
-        for (var i = 0; i < 4; i++) {
-          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
-        }
-        //sets navbar background to blue and logo to white
-        document.querySelector(".navbar").style.backgroundColor = "#3880B2";
-        document.querySelector(".navbar-brand").style.color = "white";
-        //sets 1st selection in querySelector to coloured background
-        document.querySelectorAll(".nav-link")[0].style.backgroundColor = "white";
-      }
-      //once skills.top goes under 70 which is just over the height of navbar
-      if (loc[1].top < 70) {
-        //clears all navbar-link backgrounds
-        for (var i = 0; i < 4; i++) {
-          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
-        }
-        //sets 2nd selection in querySelector to coloured background
-        document.querySelectorAll(".nav-link")[1].style.backgroundColor = "white";
-      }
-      //once portfolio.top goes under 70 which is just over the height of navbar
-      if (loc[2].top < 70) {
-        //clears all navbar-link backgrounds
-        for (var i = 0; i < 4; i++) {
-          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
-        }
-        //sets 3rd selection in querySelector to coloured background
-        document.querySelectorAll(".nav-link")[2].style.backgroundColor = "white";
-      }
-      //once aboutBar.top goes under 70 which is just over the height of navbar
-      if (loc[3].top < 70) {
-        //clears all navbar-link backgrounds
-        for (var i = 0; i < 4; i++) {
-          document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
-        }
-        //sets 4th selection in querySelector to coloured background
-        document.querySelectorAll(".nav-link")[3].style.backgroundColor = "white";
-      }
-    });
-
-
-  </script>
+    <script src="js/script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
