@@ -39,8 +39,8 @@ window.addEventListener('scroll', function(e) {
   //i.e between 0 & -2 do the following
   if (loc[0].top > -2) {
     //set navbar background to transparent, logo to blue and set home nav-link to transparent background
-    document.querySelector(".navbar").style.backgroundColor = "transparent";
-    document.querySelectorAll(".nav-link")[0].style.backgroundColor = "transparent";
+    document.querySelector(".myNav").style.backgroundColor = "transparent";
+    //document.querySelectorAll(".nav-link")[0].style.backgroundColor = "transparent";
   }
   //once landing.top moves past -2
   if (loc[0].top < -2) {
@@ -49,8 +49,8 @@ window.addEventListener('scroll', function(e) {
       document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
     }
     //sets navbar background to blue and logo to white
-    document.querySelector(".navbar").style.backgroundColor = "#3880B2";
-    document.querySelector(".navbar-brand").style.mixBlendMode = "screen";
+    document.querySelector(".myNav").style.backgroundColor = "#3880B2";
+    document.querySelector("#navLogo").style.mixBlendMode = "screen";
     //sets 1st selection in querySelector to coloured background
     document.querySelectorAll(".nav-link")[0].style.backgroundColor = "#7D8D99";
   }
@@ -91,3 +91,11 @@ window.addEventListener('scroll', function(e) {
     document.querySelectorAll(".nav-link")[4].style.backgroundColor = "#7D8D99";
   }
 });
+
+
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  var element = document.getElementById("mySidenav");
+   element.classList.toggle("sideOpen");
+}

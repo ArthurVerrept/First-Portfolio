@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,38 +12,36 @@
     <link rel="stylesheet" href="https://use.typekit.net/edc4uuz.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <title>SandBox Template!</title>
   </head>
 
   <body class="bg-light">
     <!-- current navbar soon to change-->
-    <nav class="navbar sticky-top navbar-expand-lg animated fadeInDown">
-      <a class="navbar-brand ml-2 animated fadeInLeft pt-0 pb-0" href="index.html"><img id="navLogo" src="assets/img/logo.png"></a>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link t1 text-light ml-2 animated fadeInDown" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link t2 text-light ml-2 animated fadeInDown" href="#skillsBar">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link t3 text-light ml-2 animated fadeInDown" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link t4 text-light ml-2 animated fadeInDown" href="#aboutBar">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link t5 text-light ml-2 animated mr-3 fadeInDown" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container-fluid myNav">
+      <a href="index.html"><img id="navLogo" src="assets/img/logo.png"></a>
+      <div class="menu" onclick="openNav()">
+        <div class="menuL"></div>
+        <div class="menuL"></div>
+        <div class="menuL"></div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a class="nav-link text-light" href="#">Home</a>
+        <a class="nav-link text-light" href="#skillsBar">Skills</a>
+        <a class="nav-link text-light" href="#portfolio">Portfolio</a>
+        <a class="nav-link text-light" href="#aboutBar">About Me</a>
+        <a class="nav-link text-light" href="#contact">Contact</a>
+    </div>
+
+
+
 
     <div id="landing" class="container-fluid pl-0 pr-0">
       <svg viewBox="0 0 210 110">
         <polygon class="st0 " points="210,110 0,110 0,0 42.78,0 210,0 "/>
-        <h1 id="flawlessT" class="display-2 text-right">ARTHUR<br>VERREPT</h1>
-        <h1 id="flawlessB" class="display-2 text-light">WEBSITE<br>DESIGN</h1>
+        <h1 id="name" class="display-2 text-right">ARTHUR<br>VERREPT</h1>
+        <h1 id="web" class="display-2 text-light">WEBSITE<br>DESIGN</h1>
         <img id="logo" src="assets/img/logo.png" class="img-fluid" alt="Responsive image">
     </div>
 
@@ -69,27 +66,27 @@
             <!-- assigning each of these a class of grow to identify in css for hover -->
             <!-- padding: 4; light background using font awesome for icons. the fa-pull-left allows text to wrap around icon -->
             <!-- the first div is then repeateds -->
-            <div class="grow col-xl-4 col-lg-6 col-md-12 p-4 mt-0 bg-light"><i class="fab fa-js fa-pull-left mt-1"></i><h3 class="mt-3 pb-3 text-left">JavaScript</h3>
+            <div class="grow col-xl-4 col-lg-4 p-4 mt-0 bg-light"><i class="fab fa-js fa-pull-left mt-1"></i><h3 class="mt-3 pb-3 text-left">JavaScript</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta eros arcu, ut rhoncus velit posuere a. Ut eget viverra leo, in ultricies ex. Praesent porta ante et nisi rutrum efficitur. Quisque pulvinar tellus eu elementum vehicula. Pellentesque auctor vitae metus sit amet ullamcorper. Pellentesque ac eleifend velit. Cras vehicula, eros ornare porta eleifend, mauris mauris imperdiet urna, ut luctus sem sem et elit. Nullam id consectetur purus, quis ornare est. Duis elit elit, gravida at eros a, elementum sodales lectus. Pellentesque elementum tellus sit amet nisi vulputate condimentum. In porttitor enim sed risus gravida interdum. In sit amet lobortis neque. In sit amet erat mi. Ut a elit vel diam congue lobortis.
             </p>
           </div>
-          <div class="grow col-xl-4 col-lg-6 col-md-12 p-3 mt-0 text-light"><i class="fab fa-html5 fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 text-light text-left">HTML5</h3>
+          <div class="grow col-xl-4 col-lg-4 p-3 mt-0 text-light"><i class="fab fa-html5 fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 text-light text-left">HTML5</h3>
             <p>Mauris vel sem arcu. Maecenas auctor velit ante, vitae blandit urna semper et. Nullam facilisis dui nisl, ac viverra nisi fermentum pellentesque. Vivamus ex libero, maximus nec imperdiet sit amet, eleifend in orci. Nullam facilisis eros nulla, non tempor erat porta non. Nunc rhoncus diam malesuada euismod facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vel interdum ante, ut tempus sapien. Duis facilisis odio eget vestibulum luctus. Aliquam vitae sapien ac enim porttitor venenatis sed ut libero. Aenean imperdiet gravida placerat.
             </p>
           </div>
-          <div class="grow col-xl-4 col-lg-6 col-md-12 p-3 mt-0 bg-light"><i class="fab fa-css3-alt fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">CSS</h3>
+          <div class="grow col-xl-4 col-lg-4 p-3 mt-0 bg-light"><i class="fab fa-css3-alt fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">CSS</h3>
             <p>Mauris vel sem arcu. Maecenas auctor velit ante, vitae blandit urna semper et. Nullam facilisis dui nisl, ac viverra nisi fermentum pellentesque. Vivamus ex libero, maximus nec imperdiet sit amet, eleifend in orci. Nullam facilisis eros nulla, non tempor erat porta non. Nunc rhoncus diam malesuada euismod facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vel interdum ante, ut tempus sapien. Duis facilisis odio eget vestibulum luctus. Aliquam vitae sapien ac enim porttitor venenatis sed ut libero. Aenean imperdiet gravida placerat. Aliquam vitae sapien ac enim porttitor asuel aoells.
             </p>
           </div>
-          <div class="grow col-xl-4 col-lg-6 col-md-12 p-3 mt-0 text-light"><i class="fab fa-cuttlefish fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">C Sharp</h3>
+          <div class="grow col-xl-4 col-lg-4 p-3 mt-0 text-light"><i class="fab fa-cuttlefish fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">C Sharp</h3>
             <p>Mauris vel sem arcu. Maecenas auctor velit ante, vitae blandit urna semper et. Nullam facilisis dui nisl, ac viverra nisi fermentum pellentesque. Vivamus ex libero, maximus nec imperdiet sit amet, eleifend in orci. Nullam facilisis eros nulla, non tempor erat porta non. Nunc rhoncus diam malesuada euismod facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vel interdum ante, ut tempus sapien. Duis facilisis odio eget vestibulum luctus. Aliquam vitae sapien ac enim porttitor venenatis sed ut libero. Aenean imperdiet gravida placerat. Aliquam vitae sapien ac enim porttitor asuel aoells.
             </p>
           </div>
-          <div class="grow col-xl-4 col-lg-6 col-md-12 p-3 mt-0 bg-light"><i class="fab fa-adobe fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">Premiere Pro</h3>
+          <div class="grow col-xl-4 col-lg-4 p-3 mt-0 bg-light"><i class="fab fa-adobe fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">Premiere Pro</h3>
             <p>Mauris vel sem arcu. Maecenas auctor velit ante, vitae blandit urna semper et. Nullam facilisis dui nisl, ac viverra nisi fermentum pellentesque. Vivamus ex libero, maximus nec imperdiet sit amet, eleifend in orci. Nullam facilisis eros nulla, non tempor erat porta non. Nunc rhoncus diam malesuada euismod facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vel interdum ante, ut tempus sapien. Duis facilisis odio eget vestibulum luctus. Aliquam vitae sapien ac enim porttitor venenatis sed ut libero. Aenean imperdiet gravida placerat. Aliquam vitae sapien ac enim porttitor asuel aoells.
             </p>
           </div>
-          <div class="grow col-xl-4 col-lg-4 col-md-12 p-3 mt-0 text-light"><i class="fab fa-adobe fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">Photoshop</h3>
+          <div class="grow col-xl-4 col-lg-4 p-3 mt-0 text-light"><i class="fab fa-adobe fa-pull-left mt-1"></i> <h3 class="mt-3 pb-3 left">Photoshop</h3>
             <p>Mauris vel sem arcu. Maecenas auctor velit ante, vitae blandit urna semper et. Nullam facilisis dui nisl, ac viverra nisi fermentum pellentesque. Vivamus ex libero, maximus nec imperdiet sit amet, eleifend in orci. Nullam facilisis eros nulla, non tempor erat porta non. Nunc rhoncus diam malesuada euismod facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vel interdum ante, ut tempus sapien. Duis facilisis odio eget vestibulum luctus. Aliquam vitae sapien ac enim porttitor venenatis sed ut libero. Aenean imperdiet gravida placerat. Aliquam vitae sapien ac enim porttitor asuel aoells.
             </p>
           </div>
@@ -97,11 +94,15 @@
       </section>
 
       <section id="portfolio">
-        <div class="container-fluid pl-0 pr-0">
+        <div class="container-fluid pl-0 pr-0 mt-0">
           <div class="row">
-            <div class="col-xl-12 mb-5">
+            <div class="col-xl-12">
               <a href="https://github.com/ArthurVerrept" target="_blank"> <i class="fab fa-github mt-3 ml-3 fa-pull-left" style="font-size:50px"></i></a><a href="https://arthurverrept110460868.wordpress.com/" target="_blank"> <i class="fab fa-wordpress-simple mt-3 mr-3 fa-pull-right" style="font-size:50px"></i></a><h2 class="mt-3 text-center text-light p-3">Portfolio</h2>
-              <p class="text-center mt-2"> Portfolio will go here </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-6">
+              <img id="imagePort" src="assets/img/port.png" class="image-fluid" alt="responsive image">
             </div>
           </div>
         </div>
@@ -119,7 +120,7 @@
 
         <div id="aboutContent" class="container-fluid">
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 pl-0 pr-0">
+            <div class="col-xl-3 col-lg-3 pl-0 pr-0">
               <div id="selection1" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#selection1" data-slide-to="0" class="active"></li>
@@ -140,7 +141,7 @@
               </div>
             </div>
 
-            <div class="col-xl-9 col-lg-9 col-md-9 pl-0 pr-0">
+            <div class="col-xl-9 col-lg-9 pl-0 pr-0">
               <div id="selection2" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#selection2" data-slide-to="0" class="active"></li>
@@ -271,14 +272,9 @@
           </div>
         </div>
       </footer>
-
-    <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="js/script.js"></script>
-
-    <script type="text/javascript" src="Portfolio/js/jquery.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
