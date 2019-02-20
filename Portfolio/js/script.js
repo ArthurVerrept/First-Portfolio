@@ -1,19 +1,29 @@
 window.onload = function(){
-  var animation = anime({
-  targets: '.st0',
-  points: [
-    { value: ['105,110 0,110 0,0 42.78,0 105,0 ']},
-    { value: ['210,110 105,110 105,0 147.78,0 210,0 ']},
-  ],
-  easing: 'easeInOutSine',
-  duration: 2000,
-  loop: false,
-})};
+    var animation = anime({
+    targets: '.st0',
+    points: [
+      { value: ['105,110 0,110 0,0 42.78,0 105,0 ']},
+      { value: ['210,110 105,110 105,0 147.78,0 210,0 ']},
+    ],
+    easing: 'easeInOutSine',
+    duration: 2000,
+    loop: false
+  });
+  animation.finished.then(displayLogo);
+};
+
+
+
+
+function displayLogo(){
+  document.querySelector("#logo").style.visibility = "visible";
+  document.querySelector("#logo").classList.add('animated', 'fadeIn');
+}
 
 //add an event listener that looks for scroll event
 window.addEventListener('scroll', function(e) {
   //load all id names of sections/divs into array
-  var locA = ['landing', 'skills', 'portfolio', 'aboutBar'];
+  var locA = ['landing', 'skillsBar', 'portfolio', 'aboutBar'];
   //create another empty array to be filled
   var loc = [];
   //loop through all items in locA
@@ -30,7 +40,6 @@ window.addEventListener('scroll', function(e) {
   if (loc[0].top > -2) {
     //set navbar background to transparent, logo to blue and set home nav-link to transparent background
     document.querySelector(".navbar").style.backgroundColor = "transparent";
-    document.querySelector(".navbar-brand").style.color = "#3880B2";
     document.querySelectorAll(".nav-link")[0].style.backgroundColor = "transparent";
   }
   //once landing.top moves past -2
@@ -41,7 +50,7 @@ window.addEventListener('scroll', function(e) {
     }
     //sets navbar background to blue and logo to white
     document.querySelector(".navbar").style.backgroundColor = "#3880B2";
-    document.querySelector(".navbar-brand").style.color = "white";
+    document.querySelector(".navbar-brand").style.mixBlendMode = "screen";
     //sets 1st selection in querySelector to coloured background
     document.querySelectorAll(".nav-link")[0].style.backgroundColor = "#7D8D99";
   }
