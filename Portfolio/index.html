@@ -16,23 +16,25 @@
   </head>
 
   <body class="bg-light">
-    <!-- current navbar soon to change-->
-    <div class="container-fluid myNav">
-      <a href="index.html"><img id="navLogo" src="assets/img/logo.png"></a>
-      <div class="menu" onclick="openNav()">
-        <div class="menuL"></div>
-        <div class="menuL"></div>
-        <div class="menuL"></div>
-      </div>
-    </div>
 
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sideNav">
         <a class="nav-link text-light" href="#">Home</a>
         <a class="nav-link text-light" href="#skillsBar">Skills</a>
         <a class="nav-link text-light" href="#portfolio">Portfolio</a>
         <a class="nav-link text-light" href="#aboutBar">About Me</a>
         <a class="nav-link text-light" href="#contact">Contact</a>
     </div>
+
+    <div class="container-fluid myNav menu animated fadeInDown" style="animation-delay: 2s">
+      <a id="lBox" href="index.html"><img id="navLogo" src="assets/img/logo.png"></a>
+      <div class="menu" onclick="nav()">
+        <div class="menuL"></div>
+        <div class="menuL"></div>
+        <div class="menuL"></div>
+      </div>
+    </div>
+
+
 
 
 

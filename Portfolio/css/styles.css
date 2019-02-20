@@ -113,151 +113,207 @@ html {
 }
 
 @media (min-width: 992px) {
-  .navbar{
-    transition: 0.3s;
-    background-color: transparent;
-    position: fixed;
-    width: 100%;
-  }
 
-  a.nav-link{
-    transition: 0.3s;
-  }
-
-  #navLogo{
-    width: 30px;
-    padding: 0px;
-  }
-
-  #navLogo:hover{
-    transition-duration: 0.2s;
-    transform: rotate(90deg);
-    padding: 0px;
-  }
-
-  .nav-link[class*='t1']{animation-delay: 1.4s;}
-  .nav-link[class*='t2']{animation-delay: 1.5s;}
-  .nav-link[class*='t3']{animation-delay: 1.6s;}
-  .nav-link[class*='t4']{animation-delay: 1.7s;}
-  .nav-link[class*='t5']{animation-delay: 1.8s;}
-
-  .grow{
-    /* */
-    font-size: 12px;
-    transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
-  }
-
-  .grow:hover{
-      transform: scale(1.05);
-      z-index: +1;
-  }
-
-  div i{
-    font-size: 60px;
-
-  }
-
-/* selects all div classes with the word light in it and sets bg to chosen blue */
-  h2[class*="light"],
-  div[class*="light"] {
-    background-color: #3880B2;
-  }
-
-  #caption{
-    /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-    filter: drop-shadow(-6px 0 0 #18160e);
-  }
-
-  .fab.fa-wordpress-simple,
-  .fab.fa-github{
-    color: lightgrey;
-  }
-
-  .fab.fa-github:hover{
-    color: lightgreen;
-  }
-
-  .fab.fa-wordpress-simple:hover{
-    color: skyblue;
-  }
-
-  .st0{
-    fill:#3880B2;
-  }
-
-  #landing{
-    position: relative;
-  }
-
-  #logo{
-    visibility: hidden;
-    position: absolute;
-    width: 150px;
-    top:45%;
-    left:50%;
-    transform: translate(-50%, 0);
-    mix-blend-mode: multiply;
-  }
-
-  #flawlessT{
-    font-family: futura-pt, sans-serif;
-    color: #3880B2;
-    position: absolute;
-    top:20%;
-    right:51%;
-    transform: translate(-50, -50);
-  }
-  #flawlessB{
-    font-family: futura-pt, sans-serif;
-    position: absolute;
-    top:20%;
-    left: 51%;
-    transform: translate(-50, -50);
-  }
-
-  .carousel-caption h2{
-    font-size: 40px;
-    filter: drop-shadow(-2px 0 0 #18160e);
-  }
-
-  .carousel-caption p{
-    font-size: 25px;
-    filter: drop-shadow(-2px 0 0 #18160e);
-    margin-bottom: 100px;
-  }
-
-  #skillsBar{
-    margin-top: -7px;
-  }
-
-  #skills{
-    margin-top: -8px;
-  }
-
-  #portfolio{
-    margin-top: -16px;
-  }
-
-  #about{
-    margin-top: -8px;
-  }
+    h1,h2,h3,h4,h5,h6{
+      font-family: futura-pt, sans-serif;
+    }
 
 
-  #aboutContent{
-    margin-top: -8px;
-  }
 
-  #contact{
-    padding: 0;
-    margin:0;
-  }
+    .grow{
+      /* */
+      font-size: 12px;
+      transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
+    }
 
-  #imagePort{
-    width: 600px;
-    padding:0;
-    margin-top: -8px;
-  }
+    .grow:hover{
+        transform: scale(1.05);
+        z-index: +1;
+    }
 
+    div i{
+      font-size: 60px;
+
+    }
+
+  /* selects all div classes with the word light in it and sets bg to chosen blue */
+    h2[class*="light"],
+    div[class*="light"] {
+      background-color: #3880B2;
+    }
+
+    #caption{
+      /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
+      filter: drop-shadow(-6px 0 0 #18160e);
+    }
+
+    .fab.fa-wordpress-simple,
+    .fab.fa-github{
+      color: lightgrey;
+    }
+
+    .fab.fa-github:hover{
+      color: lightgreen;
+    }
+
+    .fab.fa-wordpress-simple:hover{
+      color: skyblue;
+    }
+
+    .st0{
+      fill:#3880B2;
+    }
+
+    #landing{
+      position: relative;
+    }
+
+    #logo{
+      visibility: hidden;
+      position: absolute;
+      width: 150px;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, 0);
+      mix-blend-mode: multiply;
+    }
+
+    #name{
+      font-size: 65px;
+      color: #3880B2;
+      position: absolute;
+      top:20%;
+      right:51%;
+      transform: translate(-50, -50);
+    }
+    #web{
+      font-size: 65px;
+      position: absolute;
+      top:20%;
+      left: 51%;
+      transform: translate(-50, -50);
+    }
+
+    .carousel-caption h2{
+      font-size: 40px;
+      filter: drop-shadow(-2px 0 0 #18160e);
+    }
+
+    .carousel-caption p{
+      font-size: 25px;
+      filter: drop-shadow(-2px 0 0 #18160e);
+      margin-bottom: 100px;
+    }
+
+    #skillsBar{
+      margin-top: -7px;
+    }
+
+    #skills{
+      margin-top: -8px;
+    }
+
+    #portfolio{
+      margin-top: -16px;
+    }
+
+    #about{
+      margin-top: -8px;
+    }
+
+
+    #aboutContent{
+      margin-top: -8px;
+    }
+
+    #contact{
+      padding: 0;
+      margin:0;
+    }
+
+    #imagePort{
+      width: 600px;
+      padding:0;
+      margin-top: -8px;
+    }
+
+    .myNav{
+      padding: 10px;
+      transition: 0.3s;
+      background-color: transparent;
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+    }
+
+    #lbox{
+      padding-left: 10px;
+    }
+
+    #navLogo{
+      width: 30px;
+    }
+
+    #navLogo:hover{
+      transition-duration: 0.2s;
+      transform: rotate(90deg);
+    }
+
+    .menu{
+      transition-duration: 0.5s;
+      float: right;
+      z-index: 4;
+      padding-top: auto;
+      padding-right: 10px;
+      transform: rotate(0deg);
+    }
+
+    .menuO{
+      padding-right: 115px;
+      transform: rotate(90deg);
+    }
+
+    .menuL{
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    /* The side navigation menu */
+    .sideNav {
+      height: 100%; /* 100% height of window */
+      width: 0; /* 0 the width is changed with JS using toggle */
+      position: fixed; /* Stay in same place */
+      z-index: 2; /* This brings it on top of the growing "skills" section */
+      top: 0; /* Stay at the top */
+      left: 100%; /*this moves it to the right side of the screen*/
+      transform: translate(-100%, 0);
+      background-color: #0F3C87; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      white-space: nowrap; /* ensures words with spaces are always one line*/
+    }
+
+    .navOpen{
+      width: 170px;
+    }
+
+    /* The navigation menu links */
+    .sideNav a {
+      font-family: futura-pt, sans-serif;
+      text-align: left;
+      margin-top: -3px;
+      font-size: 30px;
+      transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sideNav a:hover {
+      color: #f1f1f1;
+    }
 }
 
 @media (min-width: 1200px) { /*setting all boxes to the same settings INDIVIDUALLY*/
@@ -394,20 +450,35 @@ html {
     z-index: 2;
   }
 
+  #lbox{
+    padding-left: 10px;
+  }
+
   #navLogo{
     width: 30px;
-    padding: 0px;
+  }
+
+  #navLogo:hover{
+    transition-duration: 0.2s;
+    transform: rotate(90deg);
   }
 
   .menu{
     transition-duration: 0.5s;
     float: right;
     z-index: 4;
-    padding-right: 180px;
+    padding-top: auto;
+    padding-right: 10px;
+    transform: rotate(0deg);
+  }
+
+  .menuO{
+    padding-right: 115px;
+    transform: rotate(90deg);
   }
 
   .menuL{
-    width: 35px;
+    width: 25px;
     height: 3px;
     background-color: white;
     margin: 6px 0;
@@ -415,40 +486,36 @@ html {
   }
 
   /* The side navigation menu */
-  .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 2;
+  .sideNav {
+    height: 100%; /* 100% height of window */
+    width: 0; /* 0 the width is changed with JS using toggle */
+    position: fixed; /* Stay in same place */
+    z-index: 2; /* This brings it on top of the growing "skills" section */
     top: 0; /* Stay at the top */
-    left: 100%;
+    left: 100%; /*this moves it to the right side of the screen*/
     transform: translate(-100%, 0);
     background-color: #0F3C87; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    white-space: nowrap; /* ensures words with spaces are always one line*/
   }
 
-  .sideOpen{
+  .navOpen{
     width: 170px;
   }
 
   /* The navigation menu links */
-  .sidenav a {
+  .sideNav a {
+    font-family: futura-pt, sans-serif;
     text-align: left;
-    padding: 0 auto;
-    font-size: 20px;
+    margin-top: -3px;
+    font-size: 30px;
     transition: 0.3s;
   }
 
   /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
+  .sideNav a:hover {
     color: #f1f1f1;
-  }
-
-  #navLogo:hover{
-    transition-duration: 0.2s;
-    transform: rotate(90deg);
-    padding: 0px;
   }
 }
