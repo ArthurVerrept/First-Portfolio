@@ -1,3 +1,18 @@
+var feed = new Instafeed({
+  get: 'user',
+  userId: '303571919',
+  accessToken: '303571919.1d02b8d.e35a0e70474c4902ad54cd6957560729',
+  resolution: 'standard_resolution',
+  limit: 15,
+  //template: '<div class="col-4 mt-2 instaCrop"><img class="instaImage p-3" src={{image}}><p class="likes mt-1" style="font-size:15px;"><i class="far fa-heart mr-1" style="font-size:15px;"></i>{{likes}}<p</p></div>'
+    template: '<a target="_blank" class="col-4 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes mt-1" style="font-size:25px;"><i class="far fa-heart mr-1" style="font-size:25px;"></i>{{likes}}</p></a>'
+});
+feed.run();
+
+
+
+
+
 window.onload = function(){
     var animation = anime({
     targets: '.st0',
@@ -23,7 +38,7 @@ function displayLogo(){
 //add an event listener that looks for scroll event
 window.addEventListener('scroll', function(e) {
   //load all id names of sections/divs into array
-  var locA = ['landing', 'skillsBar', 'portfolio', 'aboutBar'];
+  var locA = ['landing', 'skills', 'portfolio', 'about'];
   //create another empty array to be filled
   var loc = [];
   //loop through all items in locA
@@ -50,8 +65,8 @@ window.addEventListener('scroll', function(e) {
       document.querySelectorAll(".nav-link")[i].style.backgroundColor = "transparent";
     }
     //sets navbar background to blue and logo to white
-    document.querySelector(".myNav").style.backgroundColor = "#3880B2";
-    document.querySelector("#navLogo").style.mixBlendMode = "multiply";
+    document.querySelector(".myNav").style.backgroundColor = "#0F3C87";
+    //document.querySelector("#navLogo").style.mixBlendMode = "multiply";
     //sets 1st selection in querySelector to coloured background
     document.querySelectorAll(".nav-link")[0].style.backgroundColor = "#7D8D99";
   }
