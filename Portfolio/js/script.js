@@ -4,8 +4,7 @@ var feed = new Instafeed({
   accessToken: '303571919.1d02b8d.e35a0e70474c4902ad54cd6957560729',
   resolution: 'standard_resolution',
   limit: 15,
-  //template: '<div class="col-4 mt-2 instaCrop"><img class="instaImage p-3" src={{image}}><p class="likes mt-1" style="font-size:15px;"><i class="far fa-heart mr-1" style="font-size:15px;"></i>{{likes}}<p</p></div>'
-    template: '<a target="_blank" class="col-4 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes mt-1" style="font-size:25px;"><i class="far fa-heart mr-1" style="font-size:25px;"></i>{{likes}}</p></a>'
+  template: '<a target="_blank" class="col-4 p-1 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes" style="font-size:15px;"><i class="far fa-heart mr-1" style="font-size:10px;"></i>{{likes}}</p></a>'
 });
 feed.run();
 

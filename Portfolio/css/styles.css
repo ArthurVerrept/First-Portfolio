@@ -40,10 +40,6 @@ html {
       background-color: #3880B2;
     }
 
-    #caption{
-      /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-      filter: drop-shadow(-6px 0 0 #18160e);
-    }
 
     .fab.fa-wordpress-simple,
     .fab.fa-github{
@@ -83,13 +79,10 @@ html {
     }
 
     .carousel-caption h2{
-      font-size: 30px;
-      filter: drop-shadow(-2px 0 0 #18160e);
     }
 
     .carousel-caption p{
       font-size: 15px;
-      filter: drop-shadow(-2px 0 0 #18160e);
       margin-bottom: 40px;
     }
 
@@ -143,10 +136,6 @@ html {
       background-color: #3880B2;
     }
 
-    #caption{
-      /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-      filter: drop-shadow(-6px 0 0 #18160e);
-    }
 
     .fab.fa-wordpress-simple,
     .fab.fa-github{
@@ -197,12 +186,10 @@ html {
 
     .carousel-caption h2{
       font-size: 40px;
-      filter: drop-shadow(-2px 0 0 #18160e);
     }
 
     .carousel-caption p{
       font-size: 25px;
-      filter: drop-shadow(-2px 0 0 #18160e);
       margin-bottom: 100px;
     }
 
@@ -328,7 +315,7 @@ html {
   .grow{
     /* */
     transform: scale(0.9);
-    font-size: 12px;
+    font-size: 14px;
     transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
   }
 
@@ -346,11 +333,6 @@ html {
   h2[class*="light"],
   div[class*="light"] {
     background-color: #3880B2;
-  }
-
-  #caption{
-    /*drop-shadow(offset-x offset-y blur-radius spread-radius color)*/
-    filter: drop-shadow(-6px 0 0 #18160e);
   }
 
   .fab.fa-wordpress-simple,
@@ -407,14 +389,25 @@ html {
 
   .carousel-caption h2{
     font-size: 40px;
-    filter: drop-shadow(-2px 0 0 #18160e);
+
   }
 
   .carousel-caption p{
+    font-weight:bold;
     font-size: 25px;
-    filter: drop-shadow(-2px 0 0 #18160e);
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+}
+
+  .carousel-caption{
+    transition-duration: 0.3s;
+    opacity: 0.3;
   }
+
+   #rightCar:hover .carousel-caption{
+    opacity: 1;
+  }
+
+
 
   #skillsBar{
     margin-top: -7px;
@@ -534,7 +527,7 @@ html {
     color: transparent;
     font-weight: bold;
     position: relative;
-    height: 50px;
+    height: 60px;
     width: 100px;
     overflow: hidden;
   }
@@ -556,15 +549,42 @@ html {
     border: 2px solid #3880B2;
   }
 
-  .likes{
+    p.likes{
     position: absolute;
-    bottom: 90%;
-    left: 0%;
-    transform: translate(0, 50%);
-    mix-blend-mode: exclusion;
+    bottom: 100%;
+    left: -18%;
+    transform: translate(0, 0%);
+    background-color: black;
+    height:26px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 
   .form{
     margin-top:50px;
   }
+
+  #contact i{
+    color: black;
+    text-decoration: none;
+  }
+
+  #contact i:hover{
+    color: grey;
+    text-decoration: none;
+  }
+
+  #contact p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn{
+    float: right;
+    height: 50px;
+    width: 250px;
+    margin-top: 120px;
+  }
+
+
 }
