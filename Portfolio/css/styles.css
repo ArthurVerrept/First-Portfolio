@@ -14,17 +14,13 @@ h2, h3{
 
 .grow{
   /* */
-  transform: scale(0.9);
+  transform: scale(1);
   transition: all .5s cubic-bezier(0, 0.03, 0, 1.9);
 }
 
 .grow:hover{
     transform: scale(1);
     z-index: +1;
-}
-
-div i{
-  font-size: 60px;
 }
 
 /* selects all div classes with the word light in it and sets bg to chosen blue */
@@ -212,7 +208,18 @@ div[class*="light"] {
   margin-bottom: 10px;
 }
 
+#imagePort{
+  width:100%;
+  border-radius: 5px;
+}
+
+#imagePort:hover{
+  transition-duration: 0.2s;
+  border: 4px solid #3880B2;
+}
+
 @media (max-width: 575.98px) {
+
   #logo{
     width: 100px;
   }
@@ -227,16 +234,37 @@ div[class*="light"] {
     font-size: 40px;
   }
 
-  .carousel-caption h2{
-    font-size: 22px;
+  div i{
+    font-size: 30px;
+    padding: 5px 10px;
   }
 
-  .carousel-caption p{
+  .grow h3{
+    padding: 5px 10px;
+
+  }
+
+  .grow p{
+    padding: 5px 10px;
+  }
+
+  #portfolio h3,
+  #portfolio p{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  #portfolio p{
     font-size: 12px;
   }
 
+  .carousel-caption{
+    color:transparent;
+  }
+
+
   #selection1{
-    position: absolute;
+    position: relative;
     z-index: 1;
   }
 
@@ -244,18 +272,25 @@ div[class*="light"] {
     display: none;
   }
 
+
   #leftCar{
-    top:20px;
-    left:20px;
+    position: absolute;
+    top:-40px;
+    left:10px;
     height: 100px;
     width: 100px;
-    border-radius: 75px;
+    border-radius: 50px;
     border: 2px solid white;
   }
 
   #leftCar img{
     position: absolute;
-    top:-50px;
+    top:-20px;
+  }
+
+  .smallCaption{
+    padding: 30px;
+    font-size: 12px;
   }
 
   .grow{
@@ -263,8 +298,10 @@ div[class*="light"] {
   }
 
   .instaCrop {
-    height: 150px;
-    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 200px;
   }
 
   .instaCrop img {
@@ -307,6 +344,7 @@ div[class*="light"] {
 }
 
 @media (min-width: 576px) {
+
   #logo{
     width: 80px;
   }
@@ -321,12 +359,45 @@ div[class*="light"] {
     font-size: 40px;
   }
 
+  .grow{
+  transform: scale(0.9);
+  }
+
+  div i{
+    font-size: 60px;
+    padding-top: 10px;
+  }
+
+  .grow h3{
+    padding-top: 30px;
+  }
+
+  .grow p{
+    padding-top: 10px;
+  }
+
+  #portfolio h3,
+  #portfolio p{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .portTextContainer,
+  .portImageContainer{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .carousel-caption h2{
     font-size: 22px;
   }
 
   .carousel-caption p{
     font-size: 12px;
+  }
+
+  .smallCaption{
+    display: none;
   }
 
   #selection1{
@@ -390,6 +461,8 @@ div[class*="light"] {
 }
 
 @media (min-width: 768px) {
+
+
   #logo{
     width: 120px;
     top:50%;
@@ -405,6 +478,30 @@ div[class*="light"] {
 
   .grow{
     font-size: 14px;
+  }
+
+  .grow:hover{
+    transform: scale(1);
+    z-index: +1;
+  }
+
+  .grow h3{
+    padding-top: 30px;
+  }
+
+  .grow p{
+    padding: 15px;
+  }
+
+  #portfolio h3,
+  #portfolio p{
+    text-align: left;
+  }
+
+  .portTextContainer,
+  .portImageContainer{
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .carousel-caption h2{
@@ -525,12 +622,12 @@ div[class*="light"] {
   }
 
     .likes{
-    font-size: 10px;
+    font-size: 15px;
     position: absolute;
-    bottom:105%;
+    bottom:100%;
     left: -16%;
     background-color: rgb(248,249,250);
-    height:16px;
+    height:20px;
     margin: 0 auto;
     padding: 0 10px;
   }

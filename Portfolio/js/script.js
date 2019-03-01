@@ -1,8 +1,11 @@
 if (window.innerWidth < 992) {
   var instaLimit = 6;
 }
-if (window.innerWidth < 768) {
+if (window.innerWidth < 768 && window.innerWidth > 576) {
   var instaLimit = 4;
+}
+if (window.innerWidth < 576) {
+  var instaLimit = 2;
 }
 else if (console.log > 991){
   instaLimit = 15;
@@ -17,7 +20,7 @@ var feed = new Instafeed({
   accessToken: '303571919.1d02b8d.e35a0e70474c4902ad54cd6957560729',
   resolution: 'standard_resolution',
   limit: instaLimit,
-  template: '<a target="_blank" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-1 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes"><i class="far fa-heart mr-1" style="font-size:10px;"></i>{{likes}}</p></a>'
+  template: '<a target="_blank" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-1 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes"><i class="far fa-heart mr-1" style="font-size:10px;"></i>{{likes}}</p></a>'
 });
 feed.run();
 
