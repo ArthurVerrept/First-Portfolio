@@ -144,7 +144,7 @@ div[class*="light"] {
   position: fixed;
   /* Width set to 100% */
   width: 100%;
-  /* Set z index to 2 so navbar sits on top of all other Elements */
+  /* Set z-index to 2 so navbar sits on top of all other Elements */
   z-index: 2;
 }
 
@@ -272,6 +272,10 @@ div[class*="light"] {
   border: 4px solid #3880B2;
 }
 
+.btn{
+    margin-top: 10px;
+}
+
 @media (max-width: 575.98px) {
   /* Sets logo width */
   #logo{
@@ -323,42 +327,50 @@ div[class*="light"] {
     color:transparent;
   }
 
-  /* Moving the container of the left carousel in front of right carousel in terms of z axis*/
-  #selection1{
-    position: relative;
-    z-index: 1;
-  }
-
   /* Hides carousel indicators on left car */
   #selection1 li{
     display: none;
   }
 
 
+  /* Moving the container of the left carousel in front of right carousel in terms of z axis*/
+  #selection1{
+    /* Setting carousel container to relative */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* This changes the position of the left carousel and moves it over the right carousel */
   #leftCar{
+    /* Sets carousel to position absolute and crops image container size */
     position: absolute;
     top:-40px;
     left:10px;
     height: 100px;
     width: 100px;
+    /* Makes image crop round and sets a border */
     border-radius: 50px;
     border: 2px solid white;
   }
 
+  /* Moves image position within container for portraits to show better */
   #leftCar img{
     position: absolute;
     top:-20px;
   }
 
+  /* Sets small caption padding and font size */
   .smallCaption{
     padding: 30px;
     font-size: 12px;
   }
 
+  /* Sets grow font size */
   .grow{
     font-size: 12px;
   }
 
+  /* Changes instagram crop container to be central and changes sizes */
   .instaCrop {
     margin-left: auto;
     margin-right: auto;
@@ -366,44 +378,54 @@ div[class*="light"] {
     width: 200px;
   }
 
+  /* Changes intagram image size */
   .instaCrop img {
     width: 100%;
     margin: -24;
   }
 
+ /* Changes contact title to have margin top of 20px */
   #contactLoc h3{
     margin-top: 20px;
   }
 
+  /* Changes button width and height */
   .btn{
     width: 100%;
     height: 60px;
   }
 
-  /* The navigation menu links */
+  /* Changes the navigation menu links font size */
   .sideNav a {
     font-size: 20px;
   }
 
+  /* Changes the height of the landing page container to fit phone screens better */
   #landing{
     height:500px;
   }
 
+  /* Changes size of SVG animation to fit container */
   svg{
     position: absolute;
     height:500px;
+    /* changes location of SVG after resizing to keep animation central */
+    width: 100vw;
     right:50%;
     transform: translate(50%,0);
   }
 
+  /* Changes sidenav width which is toggled from nav() function in script.js */
   .navOpen{
     width: 120px;
   }
 
+  /* Changes sidenav menu OPEN location is toggled from nav() function in script.js */
   .menuO{
     padding-right: 70px;
   }
 
+  /* Changes font size for font-awesome icons in footer */
   #footer i{
     font-size: 20px;
     padding: 0;
@@ -411,71 +433,85 @@ div[class*="light"] {
 }
 
 @media (min-width: 576px) {
-
+  /* Changes logo width */
   #logo{
     width: 80px;
   }
 
+  /* Changes name position and size */
   #name{
     top:20%;
     font-size: 40px;
   }
 
+  /* Changes web element position and size */
   #web{
     top:20%;
     font-size: 40px;
   }
 
+  /* Grow elements now become seperate from each without hover since still tablet size */
   .grow{
   transform: scale(0.9);
   }
 
+  /* Setting font awesome icon sizes and padding in skills section */
   div i{
     font-size: 60px;
     padding-top: 10px;
   }
 
+  /* Setting title padding for skills section */
   .grow h3{
     padding-top: 30px;
   }
 
+  /* Setting text padding for skills section */
   .grow p{
     padding-top: 10px;
   }
 
+  /* Setting text for portfolio section */
   #portfolio h3,
   #portfolio p{
     text-align: center;
     margin-top: 15px;
   }
 
+   /* Shifts image and text to center horizontally */
   .portTextContainer,
   .portImageContainer{
     margin-left: auto;
     margin-right: auto;
   }
 
+  /* Sets carousel caption title size */
   .carousel-caption h2{
     font-size: 22px;
   }
 
+  /* Sets carousel caption text size */
   .carousel-caption p{
     font-size: 12px;
   }
 
+  /* Hides small caption from this breakpoint up */
   .smallCaption{
     display: none;
   }
 
+  /* Brings the left carousel in from of right */
   #selection1{
     position: absolute;
     z-index: 1;
   }
 
+  /* Hides carousel indicators */
   #selection1 li{
     display: none;
   }
 
+  /* Sets new left carousel position in circle with white border */
   #leftCar{
     top:20px;
     left:20px;
@@ -485,124 +521,147 @@ div[class*="light"] {
     border: 2px solid white;
   }
 
+  /* Sets carousel image to correct position inside crop container */
   #leftCar img{
     position: absolute;
     top:-50px;
   }
 
+  /* Changes grow element font size */
   .grow{
     font-size: 12px;
   }
 
+  /* Changes instagram crop container size */
   .instaCrop {
     height: 150px;
     width: 100px;
   }
 
+  /* Changes instagram image size */
   .instaCrop img {
     width: 100%;
     margin: -24;
   }
 
+  /* Sets contact title margin top to 20px */
   #contactLoc h3{
     margin-top: 20px;
   }
 
+  /* Changes button width and height */
   .btn{
     width: 100%;
     height: 60px;
   }
 
-  /* The navigation menu links */
+  /* Changes the navigation menu links font size */
   .sideNav a {
     font-size: 20px;
   }
 
+  /* Changes sidenav width which is toggled from nav() function in script.js */
   .navOpen{
     width: 170px;
   }
 
+  /* Changes sidenav menu OPEN location is toggled from nav() function in script.js */
   .menuO{
     padding-right: 120px;
   }
 
+  /* Changes font size for font-awesome icons in footer */
   #footer i{
     font-size: 40px;
   }
 }
 
 @media (min-width: 768px) {
-
-
+  /* Changes logo width */
   #logo{
     width: 120px;
     top:50%;
   }
 
+  /* Changes name size */
   #name{
     font-size: 50px;
   }
 
+  /* Changes web element size */
   #web{
     font-size: 50px;
   }
 
+  /* Sets grow font size */
   .grow{
     font-size: 14px;
   }
 
+  /* Hover size chnage added to grow at beginning of desktop screen size */
   .grow:hover{
+    /* Hover element changes scale and z-index to remain in front of other elemnts when selected */
     transform: scale(1);
     z-index: +1;
   }
 
+
+  /* Setting title padding for skills section */
   .grow h3{
     padding-top: 30px;
   }
 
+  /* Setting text padding for skills section */
   .grow p{
     padding: 15px;
   }
 
+  /* Setting text for portfolio section */
   #portfolio h3,
   #portfolio p{
-
+    text-align: left;
   }
 
+  /* Shifts image and text to center vertically */
   .portTextContainer,
   .portImageContainer{
     margin-top: auto;
     margin-bottom: auto;
   }
 
+  /* Sets carousel caption title size */
   .carousel-caption h2{
     font-size: 20px;
   }
 
+  /* Sets carousel caption text size */
   .carousel-caption p{
     font-size: 14px;
   }
 
+  /* Sets carousel caption transition speed and opacity to better view image when not reading text */
   .carousel-caption{
     transition-duration: 0.3s;
-  }
-
-  .carousel-caption{
     opacity: 0.3;
   }
 
+  /* When hovering over any of the right container the caption opacity is changed to full */
    #rightCar:hover .carousel-caption{
     opacity: 1;
   }
 
+
+  /* Sets left carousel to origional pos */
   #selection1{
-    position: inherit
+    position: inherit;
   }
 
+  /* Shows left carousel indicators again */
   #selection1 li{
     display: inherit;
   }
 
+  /* Resets left carousel container position, size and shape */
   #leftCar{
     top:0;
     left:0;
@@ -612,39 +671,46 @@ div[class*="light"] {
     border: none;
   }
 
+  /* Resets left carousel image position */
   #leftCar img{
     position: inherit;
     top:0;
   }
 
-  /* The navigation menu links */
+  /* Changes the navigation menu links font size */
   .sideNav a {
     font-size: 25px;
   }
 
+  /* Changes instagram crop container size */
   .instaCrop {
     height: 100px;
     width: 100px;
   }
 
+  /* Changes instagram image size */
   .instaCrop img {
     width: 100%;
     margin: -24;
   }
 
+  /* Changes button float and height */
   .btn{
     float: right;
     height: 60px;
   }
 
+  /* Changes font size of form labels */
   label{
     font-size: 15px;
   }
 
+  /* Instagram section margin bottom when above contacts in this breakpoint */
   .insta{
     margin-bottom: 30px;
   }
 
+  
   #contactLoc h3{
     margin-top: 0px;
   }
@@ -702,6 +768,7 @@ div[class*="light"] {
   }
 
   .btn{
+    margin-top: 105px;
     width: 200px;
   }
 }
