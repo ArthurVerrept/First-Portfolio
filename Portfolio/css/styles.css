@@ -259,6 +259,11 @@ div[class*="light"] {
   margin-bottom: 10px;
 }
 
+/* Setting photo credit section to matching blue in footer */
+.photos a{
+  color: #3880B2;
+}
+
 #imagePort{
   /* Sets portfolio image to 100% size of container */
   width:100%;
@@ -272,8 +277,15 @@ div[class*="light"] {
   border: 4px solid #3880B2;
 }
 
+/* Changing color of button to match portfolio and margin top */
 .btn{
     margin-top: 10px;
+    background-color: #3880B2;
+}
+
+/* Changing hover color to match navbar */
+.btn:hover{
+  background-color: #0F3C87;
 }
 
 @media (max-width: 575.98px) {
@@ -710,55 +722,58 @@ div[class*="light"] {
     margin-bottom: 30px;
   }
 
-  
+  /* Changing contact form title margin top for new layour on breakpoint change */
   #contactLoc h3{
     margin-top: 0px;
   }
 }
 
 @media (min-width: 992px) {
-
+  /* Sets carousel caption title size */
   .carousel-caption h2{
     font-size: 40px;
   }
 
+  /* Sets carousel caption text size */
   .carousel-caption p{
     font-size: 18px;
   }
 
-  /* The navigation menu links */
+  /* Sets the navigation menu links font size */
   .sideNav a {
     font-size: 30px;
   }
 
+  /* Footer section 50px top margin */
   .footer{
     margin-top: 50px;
   }
 
+  /* Changes instagram crop container size */
   .instaCrop {
     height: 50px;
     width: 80px;
   }
 
+  /* Changes instagram image size */
   .instaCrop img {
     width: 140%;
     margin: -21%;
   }
 
-
+  /* At this breakpoint instagram hover is added to show images in full when hovered */
   .instaCrop:hover {
+    /* Setting text color to black and showing overflow and moving to front */
     color: black;
     overflow: visible;
     z-index: +1;
   }
 
-  .instaCrop img:hover {
-    padding: 0px;
-  }
-
-    .likes{
-    font-size: 15px;
+  /* Sets likes class set in script.js instafeed section */
+  .likes{
+    /* Moving likes on top of each image and setting backgroung color to match page */
     position: absolute;
+    font-size: 15px;
     bottom:100%;
     left: -16%;
     background-color: rgb(248,249,250);
@@ -767,6 +782,7 @@ div[class*="light"] {
     padding: 0 10px;
   }
 
+  /* Changes button width and height */
   .btn{
     margin-top: 105px;
     width: 200px;
@@ -774,34 +790,41 @@ div[class*="light"] {
 }
 
 @media (min-width: 1200px) {
-  /*setting all boxes to the same settings INDIVIDUALLY*/
+  /* Changes logo width */
   #logo{
     width: 150px;
   }
 
+  /* Changes name size */
   #name{
     font-size: 65px;
   }
+
+  /* Changes web element size */
   #web{
     font-size: 65px;
   }
 
+  /* Sets carousel caption text size */
   .carousel-caption p{
     font-size: 22px;
   }
 
+  /* Changes instagram crop container size */
   .instaCrop {
     height: 50px;
     width: 100px;
   }
 
-    p.likes{
+  /* Changing text element of likes */
+  p.likes{
     font-size: 15px;
     top:-45%;
     left: -17%;
     height:22px;
   }
 
+  /* Changes button width */
   .btn{
     width: 250px;
   }

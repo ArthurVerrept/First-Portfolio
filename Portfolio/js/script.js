@@ -1,50 +1,66 @@
+/* When page is loaded check window width for each breakpoint load a different amount of images */
+/* When instagram is over contact section less images is loaded to shorten scroll amount */
+/* New instagram limit is only loaded when page is loaded/re-loaded not when changed */
 if (window.innerWidth < 992) {
   var instaLimit = 6;
 }
+/* As screen size gets thinner less images are shown */
 if (window.innerWidth < 768 && window.innerWidth > 576) {
   var instaLimit = 4;
 }
+/* As screen size gets thinner less images are shown */
 if (window.innerWidth < 576) {
   var instaLimit = 2;
 }
+/* If screen size is over 991 show full amount of images */
 else if (console.log > 991){
   instaLimit = 15;
 }
 
-
-
-
+/* Instafeed section  */
 var feed = new Instafeed({
+  /* My info */
   get: 'user',
   userId: '303571919',
   accessToken: '303571919.1d02b8d.e35a0e70474c4902ad54cd6957560729',
+  /* Setting resolution to highest setting in instafeed */
   resolution: 'standard_resolution',
+  /* Setting limit to variable found above */
   limit: instaLimit,
+  /* Setting instagram image to open in new tab when clicked and adding classes where needed */
+  /* Adding font-awesome like icon */
   template: '<a target="_blank" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-1 mt-2 instaCrop" href="{{link}}"><img class="instaImage" src="{{image}}"/><p class="likes"><i class="far fa-heart mr-1" style="font-size:10px;"></i>{{likes}}</p></a>'
 });
+/* Running instafeed */
 feed.run();
 
 
 
 
-
+  /* When page content is loaded */
   document.addEventListener('DOMContentLoaded', function(){
+    /* Create animation using anime.js svg morphing */
     var animation = anime({
+      /* Starts with HTML class element st0 polygon and moves through SVG anchor locations below */
     targets: '.st0',
     points: [
       { value: ['105,110 0,110 0,0 42.78,0 105,0 ']},
       { value: ['210,110 105,110 105,0 147.78,0 210,0 ']},
     ],
+    /* Simple sign wave easing used */
     easing: 'easeInOutSine',
+    /* Animation lasts 2 secons */
     duration: 2000,
+    /* plays only once */
     loop: false
   });
+  /* Using promise to only load logo when animation is finished calling displayLogo function */
   animation.finished.then(displayLogo);
 });
 
 
 
-
+/* Function to show logo and add animate.css to fade logo in */
 function displayLogo(){
   document.querySelector("#logo").style.visibility = "visible";
   document.querySelector("#logo").classList.add('animated', 'fadeIn');
@@ -126,11 +142,13 @@ window.addEventListener('scroll', function(e) {
 
 
 
-/* Set the width of the side navigation to 250px */
+/* Set the width of the side navigation to toggle between 2 different css sections */
 function nav() {
+  /* Selects sideNav class and toggles between navOpen and origional state */
   var nav = document.querySelector(".sideNav");
   nav.classList.toggle("navOpen");
 
+  /* Selects menu class and toggles between menuO and origional state */
   var menu = document.querySelector(".menu");
   menu.classList.toggle("menuO");
 }
